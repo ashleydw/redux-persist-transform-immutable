@@ -1,11 +1,11 @@
 var Immutable = require('immutable')
-var Serialize = require('remotedev-serialize')
+var Serialize = require('./serialize')
 var reduxPersist = require('redux-persist')
 
 module.exports = function (config) {
   config = config || {}
 
-  var serializer =  Serialize.immutable(Immutable, config.records)
+  var serializer =  Serialize(Immutable, config.records)
 
-  return reduxPersist.createTransform(serializer.stringify, serializer.parse, config)
+  return reduxPersist.createTransform(Serialize.stringify, Serialize.parse, config)
 }

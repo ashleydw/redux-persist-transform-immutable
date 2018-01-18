@@ -1,13 +1,13 @@
 {
   "name": "redux-persist-transform-immutable",
-  "version": "4.3.0",
+  "version": "4.4.0",
   "description": "immutable.js transform for redux-persist",
   "main": "index.js",
   "scripts": {
     "test": "echo \"no test specified\" && exit 0"
   },
   "dependencies": {
-    "remotedev-serialize": "^0.1.0"
+    "jsan": "^3.1.0"
   },
   "peerDependencies": {
     "redux-persist": "^4.0.0",
